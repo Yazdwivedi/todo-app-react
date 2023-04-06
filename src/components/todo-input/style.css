@@ -1,0 +1,50 @@
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input-container input{
+    flex:0.7;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 8px;
+}
+
+.input-container input:focus{
+    outline: 0px;
+    border: 3px solid #0d64fc;
+}
+
+.input-container button{
+    flex:0.1;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: white;
+    background-color: blueviolet;
+    border: 0px;
+    padding: 8px;
+}
+
+.input-container button:hover{
+    cursor: pointer;
+}
+
+.input-container button:active{
+    outline: 2px solid #0d64fc;
+}
+
+@media screen and (max-width: 768px){
+    .input-container{
+        flex-direction: column;
+    }
+    .input-container input{
+        padding: 8px;
+        padding-left: 8px;
+    }
+    .input-container button{
+        margin-top: 10px;
+    }
+    
+}

@@ -1,0 +1,30 @@
+.container{
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top:0;
+    left:0;
+    justify-content: center;
+    z-index: 100;
+    padding-top: 5%;
+    background-color: #2e3d54;
+  }
+  
+  .todo-box{
+    width: 50%;
+    height: fit-content;
+    border-radius: 15px;
+    text-align: center;
+    padding: 3%;
+    padding-top: 1%;
+    background-color: #2d3138;
+    color: white;
+  }
+
+  @media screen and (max-width: 768px){
+
+    .todo-box{
+      width: 80%;
+    }
+}
