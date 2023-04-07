@@ -1,4 +1,3 @@
-import "./style.css";
 import { BoxLayout } from "../../layouts/box-layout/box-layout";
 import UserForm from "../../components/user-form";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -9,18 +8,21 @@ const CaptureTaskDetails = () => {
   const navigate = useNavigate();
 
   const nullCheck = (str) => {
-    return str && str!=="undefined" && str!=="null" ? str : "";
-  }
+    return str && str !== "undefined" && str !== "null" ? str : "";
+  };
 
   const onFormSubmit = (userData) => {
     let itemList = localStorage.getItem("todo-items") || "[]";
     itemList = JSON.parse(itemList);
-    itemList.unshift({ id: uuidv4(), data: { title: userData?.title, desc: userData?.desc } });
+    itemList.unshift({
+      id: uuidv4(),
+      data: { title: userData?.title, desc: userData?.desc },
+    });
     itemList = JSON.stringify(itemList);
     localStorage.setItem("todo-items", itemList);
     window.dispatchEvent(new Event("storage"));
     navigate("/");
-  }
+  };
 
   return (
     <BoxLayout>
@@ -30,7 +32,7 @@ const CaptureTaskDetails = () => {
         initValues={{
           id: nullCheck(searchParams.get("id")),
           title: nullCheck(searchParams.get("title")),
-          desc: nullCheck(searchParams.get("desc"))
+          desc: nullCheck(searchParams.get("desc")),
         }}
         onFormSubmit={onFormSubmit}
       />

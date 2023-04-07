@@ -26,11 +26,7 @@ const TodoInput = () => {
   return (
     <div className="input-container">
       <input value={userInp || ""} onChange={onInputChange} />
-      <button
-        onClick={onTodoSubmit}
-      >
-        Add
-      </button>
+      <button onClick={onTodoSubmit}>Add</button>
       <button
         onClick={() =>
           navigate({

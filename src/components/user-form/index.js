@@ -32,31 +32,28 @@ const UserForm = ({ type, initValues, onFormSubmit }) => {
   };
 
   return (
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="form-container"
-      >
-        <div className="input-group">
-          <div className="title-input">
-            <label>Title of Task</label>
-            <input
-              defaultValue={initValues?.title}
-              {...register("title", { required: true })}
-              style={errors.title ? { border: "2px solid crimson" } : {}}
-            />
-            {errors.title && <span>*Title is required</span>}
-          </div>
-          <div className="desc-input">
-            <label>Description of Task</label>
-            <input
-              defaultValue={initValues?.desc}
-              {...register("desc")}
-              style={errors.desc ? { border: "2px solid crimson" } : {}}
-            />
-          </div>
+    <form onSubmit={handleSubmit(onSubmit)} className="form-container">
+      <div>
+        <div className="title-input">
+          <label>Title of Task</label>
+          <input
+            defaultValue={initValues?.title}
+            {...register("title", { required: true })}
+            style={errors.title ? { border: "2px solid crimson" } : {}}
+          />
+          {errors.title && <span>*Title is required</span>}
         </div>
-        <input type="submit" className="submitBtn" />
-      </form>
+        <div className="desc-input">
+          <label>Description of Task</label>
+          <input
+            defaultValue={initValues?.desc}
+            {...register("desc")}
+            style={errors.desc ? { border: "2px solid crimson" } : {}}
+          />
+        </div>
+      </div>
+      <input type="submit" className="submitBtn" />
+    </form>
   );
 };
 
