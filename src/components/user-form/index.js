@@ -32,9 +32,7 @@ const UserForm = ({ type, initValues, onFormSubmit }) => {
   };
 
   return (
-    <div>
       <form
-        id="userForm"
         onSubmit={handleSubmit(onSubmit)}
         className="form-container"
       >
@@ -59,7 +57,6 @@ const UserForm = ({ type, initValues, onFormSubmit }) => {
         </div>
         <input type="submit" className="submitBtn" />
       </form>
-    </div>
   );
 };
 

@@ -1,12 +1,12 @@
 .form-container{
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 .form-container span{
     margin-top: 5px;
     font-size: small;
-    font-family: serif;
     color: crimson;
 }
 
@@ -46,7 +46,6 @@
 .submitBtn{
     border-radius: 10px;
     width:10%;
-    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     color: white;
     background-color: blueviolet;
@@ -64,6 +63,10 @@
 }
 
 @media screen and (max-width: 1190px){
+    .form-container{
+        margin-top: 0px;
+    }
+    
     .input-group{
         display: flex;
         flex-direction: column;
